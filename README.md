@@ -7,10 +7,32 @@ Helps to check a string for different types of password-policies.
 npm install password-policy
 ```
 
-## Usage
+## Example
 
 ```js
-const pp = require('password-policy');
+const passwordPolicy = require('password-policy');
 
-pp.hasLowerCase('Foo'); // => true
+passwordPolicy.hasLowerCase('Test'); // => true
 ```
+
+#### Functions:
+  - hasUpperCase
+  - hasLowerCase
+  - hasNumber
+  - hasSpecialCharacter
+
+
+###### hasUpperCase(password, (times = 1))
+Returns true if the number of uppercase-characters in the password is more than times.
+
+
+###### hasLowerCase(password, (times = 1))
+Returns true if the number of lowercase-characters in the password is more than times.
+
+
+###### hasNumber(password, (times = 1))
+Returns true if the number of numeric-characters in the password is more than times.
+
+
+###### hasSpecialCharacter(password, (times = 1))
+Returns true if the number of special-characters in the password is more than times.
